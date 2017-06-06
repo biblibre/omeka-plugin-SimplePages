@@ -41,13 +41,13 @@ function simple_pages_get_links_for_children_pages($parentId = null, $sort = 'or
         $subNavLinks = simple_pages_get_links_for_children_pages($page->id, $sort, $requiresIsPublished);
         if (count($subNavLinks) > 0) {
             $navLinks[] = array(
-                'label' => $page->title,
+                'label' => $page->getLocalizedTitle(),
                 'uri' => $uri,
                 'pages' => $subNavLinks
             );
         } else {
             $navLinks[] = array(
-                'label' => $page->title,
+                'label' => $page->getLocalizedTitle(),
                 'uri' => $uri,
             );
         }
@@ -112,10 +112,10 @@ function simple_pages_display_breadcrumbs($pageId = null, $seperator=' > ', $inc
         foreach($bPages as $bPage) {
             if ($bPage->id == $page->id) {
                 if ($includePage) {
-                    $pageLinks[] = html_escape($bPage->title);
+                    $pageLinks[] = html_escape($bPage->getLocalizedTitle());
                 }
             } else {
-                $pageLinks[] = '<a href="' . public_url($bPage->slug) .  '">' . html_escape($bPage->title) . '</a>';
+                $pageLinks[] = '<a href="' . public_url($bPage->slug) .  '">' . html_escape($bPage->getLocalizedTitle()) . '</a>';
             }
         }
         $pageLinks[] = '<a href="'. public_url('') . '">' . __('Home') . '</a>';
@@ -167,7 +167,7 @@ function simple_pages_get_parent_options($page)
     $potentialParentPages = get_db()->getTable('SimplePagesPage')->findPotentialParentPages($page->id);
     foreach($potentialParentPages as $potentialParentPage) {
         if (trim($potentialParentPage->title) != '') {
-            $valuePairs[$potentialParentPage->id] = $potentialParentPage->title;
+            $valuePairs[$potentialParentPage->id] = $potentialParentPage->getLocalizedTitle();
         }
     }
     return $valuePairs;
