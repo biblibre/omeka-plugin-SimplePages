@@ -67,7 +67,20 @@ class SimplePagesPlugin extends Omeka_Plugin_AbstractPlugin
           KEY `parent_id` (`parent_id`)
         ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
         $db->query($sql);
-        
+
+        $db->query("
+            CREATE TABLE IF NOT EXISTS `$db->SimplePagesPageTranslation` (
+                id int(10) unsigned NOT NULL AUTO_INCREMENT,
+                page_id int(10) unsigned NOT NULL,
+                locale VARCHAR(16) COLLATE utf8_unicode_ci NOT NULL,
+                title tinytext COLLATE utf8_unicode_ci NOT NULL,
+                text mediumtext COLLATE utf8_unicode_ci NOT NULL,
+                PRIMARY KEY (`id`),
+                UNIQUE KEY `page_id_locale` (`page_id`, `locale`),
+                FOREIGN KEY `page_id` (`page_id`) REFERENCES `$db->SimplePagesPage` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+        ");
+
         // Save an example page.
         $page = new SimplePagesPage;
         $page->modified_by_user_id = current_user()->id;
