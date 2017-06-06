@@ -49,7 +49,13 @@ class SimplePages_IndexController extends Omeka_Controller_AbstractActionControl
         $this->view->form = $form;
         $this->_processPageForm($page, $form, 'edit');
     }
-    
+
+    public function translateAction()
+    {
+        $page = $this->_helper->db->findById();
+        $this->view->simple_pages_page = $page;
+    }
+
     protected function _getForm($page = null)
     { 
         $formOptions = array('type' => 'simple_pages_page', 'hasPublicPage' => true);

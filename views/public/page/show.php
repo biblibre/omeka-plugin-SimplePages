@@ -13,10 +13,10 @@ echo head(array(
 <div id="primary">
     <?php if (!$is_home_page): ?>
     <p id="simple-pages-breadcrumbs"><?php echo simple_pages_display_breadcrumbs(); ?></p>
-    <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
+    <h1><?php echo metadata('simple_pages_page', 'localized_title'); ?></h1>
     <?php endif; ?>
     <?php
-    $text = metadata('simple_pages_page', 'text', array('no_escape' => true));
+    $text = metadata('simple_pages_page', 'localized_text', array('no_escape' => true));
     echo $this->shortcodes($text);
     ?>
 </div>

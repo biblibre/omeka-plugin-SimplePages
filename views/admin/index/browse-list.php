@@ -24,6 +24,9 @@
                     <li><a class="edit" href="<?php echo html_escape(record_url('simple_pages_page', 'edit')); ?>">
                         <?php echo __('Edit'); ?>
                     </a></li>
+                    <li><a class="translate" href="<?php echo html_escape(record_url('simple_pages_page', 'translate')); ?>">
+                        <?php echo __('Translate'); ?>
+                    </a></li>
                     <li><a class="delete-confirm" href="<?php echo html_escape(record_url('simple_pages_page', 'delete-confirm')); ?>">
                         <?php echo __('Delete'); ?>
                     </a></li>

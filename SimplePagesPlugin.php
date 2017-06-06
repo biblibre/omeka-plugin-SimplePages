@@ -151,6 +151,21 @@ class SimplePagesPlugin extends Omeka_Plugin_AbstractPlugin
         if ($oldVersion < '3.1.1') {
             delete_option('simple_pages_filter_page_content');
         }
+
+        if (version_compare($oldVersion, '3.1.1', '<=')) {
+            $db->query("
+                CREATE TABLE IF NOT EXISTS `$db->SimplePagesPageTranslation` (
+                    id int(10) unsigned NOT NULL AUTO_INCREMENT,
+                    page_id int(10) unsigned NOT NULL,
+                    locale VARCHAR(16) COLLATE utf8_unicode_ci NOT NULL,
+                    title tinytext COLLATE utf8_unicode_ci NOT NULL,
+                    text mediumtext COLLATE utf8_unicode_ci NOT NULL,
+                    PRIMARY KEY (`id`),
+                    UNIQUE KEY `page_id_locale` (`page_id`, `locale`),
+                    FOREIGN KEY `page_id` (`page_id`) REFERENCES `$db->SimplePagesPage` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            ");
+        }
     }
 
     /**
@@ -172,10 +187,12 @@ class SimplePagesPlugin extends Omeka_Plugin_AbstractPlugin
         
         $indexResource = new Zend_Acl_Resource('SimplePages_Index');
         $pageResource = new Zend_Acl_Resource('SimplePages_Page');
+        $pageTranslationResource = new Zend_Acl_Resource('SimplePages_PageTranslation');
         $acl->add($indexResource);
         $acl->add($pageResource);
+        $acl->add($pageTranslationResource);
 
-        $acl->allow(array('super', 'admin'), array('SimplePages_Index', 'SimplePages_Page'));
+        $acl->allow(array('super', 'admin'), array('SimplePages_Index', 'SimplePages_Page', 'SimplePages_PageTranslation'));
         $acl->allow(null, 'SimplePages_Page', 'show');
         $acl->deny(null, 'SimplePages_Page', 'show-unpublished');
     }
