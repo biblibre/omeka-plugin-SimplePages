@@ -1,7 +1,7 @@
 # Translation for the Simple Pages plugin for Omeka.
 # Copyright (C) 2011 Roy Rosenzweig Center for History and New Media
 # This file is distributed under the same license as the Omeka package.
-# 
+#
 # Translators:
 # rijekateam <digitalizacija@gkri.hr>, 2013-2014
 # rijekateam <digitalizacija@gkri.hr>, 2012
@@ -13,17 +13,18 @@ msgstr ""
 "PO-Revision-Date: 2014-11-13 13:28+0000\n"
 "Last-Translator: rijekateam <digitalizacija@gkri.hr>\n"
 "Language-Team: Croatian (http://www.transifex.com/omeka/omeka/language/hr/)\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: SimplePagesPlugin.php:268
+#: SimplePagesPlugin.php:294
 msgid "Simple Pages"
 msgstr "Simple Pages"
 
-#: SimplePagesPlugin.php:294
+#: SimplePagesPlugin.php:320
 msgid "Simple Page"
 msgstr "Jednostavna stranica"
 
@@ -35,79 +36,112 @@ msgstr "Filtriraj korisnički unos za sadržaj stranice?"
 msgid ""
 "If checked, this plugin will filter all simple pages using the HTML filters "
 "set on the security settings page."
-msgstr "Ako je odabrana ova opcija, ovaj dodatak će filtrirati sve jednostavne stranice koristeći HTML filtere postavljene na stranici sigurnosnih postavki. "
+msgstr ""
+"Ako je odabrana ova opcija, ovaj dodatak će filtrirati sve jednostavne "
+"stranice koristeći HTML filtere postavljene na stranici sigurnosnih "
+"postavki. "
 
-#: controllers/IndexController.php:65
+#: controllers/IndexController.php:73 controllers/TranslationController.php:53
 msgid "Name and heading for the page (required)"
 msgstr "Naziv i naslov stranice (obavezno)"
 
-#: controllers/IndexController.php:75 views/admin/index/browse-list.php:6
+#: controllers/IndexController.php:83 views/admin/index/browse-list.php:6
 msgid "Slug"
 msgstr "Slug"
 
-#: controllers/IndexController.php:77
+#: controllers/IndexController.php:85
 msgid ""
 "The slug is the part of the URL for this page. A slug will be created "
 "automatically from the title if one is not entered. Letters, numbers, "
 "underscores, dashes, and forward slashes are allowed."
-msgstr "Slug je dio URL-a ove stranice. Ukoliko ništa ne upišete, slug se generira automatski iz naslova. Dopušteni znakovi: slova, brojevi, podcrtice, crtice i kose crte."
+msgstr ""
+"Slug je dio URL-a ove stranice. Ukoliko ništa ne upišete, slug se generira "
+"automatski iz naslova. Dopušteni znakovi: slova, brojevi, podcrtice, crtice "
+"i kose crte."
 
-#: controllers/IndexController.php:91
+#: controllers/IndexController.php:99
 msgid "Use HTML editor?"
 msgstr "Koristi HTML urednik?"
 
-#: controllers/IndexController.php:93
+#: controllers/IndexController.php:101
 msgid "Check this to add an HTML editor bar for easily creating HTML."
-msgstr "Označite ovu kućicu ako želite dodati alatnu traku HTML uređivača za jednostavno kreiranje HTML-a."
+msgstr ""
+"Označite ovu kućicu ako želite dodati alatnu traku HTML uređivača za "
+"jednostavno kreiranje HTML-a."
 
-#: controllers/IndexController.php:104
+#: controllers/IndexController.php:112
+#: controllers/TranslationController.php:64 views/admin/index/translate.php:20
 msgid "Text"
 msgstr "Tekst"
 
-#: controllers/IndexController.php:106
+#: controllers/IndexController.php:114
+#: controllers/TranslationController.php:66
 msgid ""
 "Add content for page. This field supports shortcodes. For a list of "
-"available shortcodes, refer to the <a target=_blank "
-"href=\"http://omeka.org/codex/Shortcodes\">Omeka Codex</a>."
-msgstr "Dodavanje sadržaja stranici. Ovo polje podržava kratke kodove. Popis dostupnih kratkih kodova potražite u <a target=_blank href=\"http://omeka.org/codex/Shortcodes\">Omeka Codexu</a>."
+"available shortcodes, refer to the <a target=_blank href=\"http://omeka.org/"
+"codex/Shortcodes\">Omeka Codex</a>."
+msgstr ""
+"Dodavanje sadržaja stranici. Ovo polje podržava kratke kodove. Popis "
+"dostupnih kratkih kodova potražite u <a target=_blank href=\"http://omeka."
+"org/codex/Shortcodes\">Omeka Codexu</a>."
 
-#: controllers/IndexController.php:117
+#: controllers/IndexController.php:125
 msgid "Parent"
 msgstr "Nadređena stranica"
 
-#: controllers/IndexController.php:118
+#: controllers/IndexController.php:126
 msgid "The parent page"
 msgstr "Hijerarhijski nadređena stranica. "
 
-#: controllers/IndexController.php:126
+#: controllers/IndexController.php:134
 msgid "Order"
 msgstr "Redoslijed"
 
-#: controllers/IndexController.php:128
+#: controllers/IndexController.php:136
 msgid "The order of the page relative to the other pages with the same parent"
-msgstr "Redoslijed stranice u odnosu na druge stranice s istom nadređenom stranicom. "
+msgstr ""
+"Redoslijed stranice u odnosu na druge stranice s istom nadređenom stranicom. "
 
-#: controllers/IndexController.php:140
+#: controllers/IndexController.php:148
 msgid "Publish this page?"
 msgstr "Objavi ovu stranicu?"
 
-#: controllers/IndexController.php:141
+#: controllers/IndexController.php:149
 msgid "Checking this box will make the page public"
 msgstr "Označite ovu kućicu da objavite stranicu"
 
-#: controllers/IndexController.php:161
+#: controllers/IndexController.php:177
 #, php-format
 msgid "The page \"%s\" has been added."
 msgstr "Stranica \"%s\" je dodana."
 
-#: controllers/IndexController.php:163
+#: controllers/IndexController.php:179
 #, php-format
 msgid "The page \"%s\" has been edited."
 msgstr "Stranica \"%s\" je uređena."
 
-#: controllers/IndexController.php:181
+#: controllers/IndexController.php:194
 #, php-format
 msgid "The page \"%s\" has been deleted."
+msgstr "Stranica \"%s\" je obrisana."
+
+#: controllers/TranslationController.php:43
+msgid "Locale"
+msgstr ""
+
+#: controllers/TranslationController.php:94
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been added."
+msgstr "Stranica \"%s\" je dodana."
+
+#: controllers/TranslationController.php:96
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been edited."
+msgstr "Stranica \"%s\" je uređena."
+
+#: controllers/TranslationController.php:128
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been deleted."
 msgstr "Stranica \"%s\" je obrisana."
 
 #: helpers/SimplePageFunctions.php:121
@@ -118,44 +152,48 @@ msgstr "Home"
 msgid "Main Page (No Parent)"
 msgstr "Glavna stranica (nema nadređene)"
 
-#: models/SimplePagesPage.php:60
+#: models/SimplePagesPage.php:61 models/SimplePagesPageTranslation.php:23
 msgid "The page must be given a title."
 msgstr "Stranica mora imati naslov."
 
-#: models/SimplePagesPage.php:64
+#: models/SimplePagesPage.php:65 models/SimplePagesPageTranslation.php:27
 msgid "The title for your page must be 255 characters or less."
 msgstr "Naslov vaše stranice smije sadržavati najviše 255 znakova. "
 
-#: models/SimplePagesPage.php:68
+#: models/SimplePagesPage.php:69
 msgid "The title is already in use by another page. Please choose another."
 msgstr "Naslov se već koristi na drugoj stranici. Molimo izaberite drugi."
 
-#: models/SimplePagesPage.php:72
+#: models/SimplePagesPage.php:73
 msgid "The page must be given a valid slug."
 msgstr "Stranica mora imati valjani slug."
 
-#: models/SimplePagesPage.php:76
+#: models/SimplePagesPage.php:77
 msgid "The slug for your page must not be a forward slash."
 msgstr "Slug vaše stranice ne smije biti kosa crta."
 
-#: models/SimplePagesPage.php:80
+#: models/SimplePagesPage.php:81
 msgid "The slug for your page must be 255 characters or less."
 msgstr "Slug vaše stranice smije imati najviše 255 znakova. "
 
-#: models/SimplePagesPage.php:84
+#: models/SimplePagesPage.php:85
 msgid "The slug is already in use by another page. Please choose another."
 msgstr "Slug se već koristi na drugoj stranici. Molimo odaberite novi slug. "
 
-#: models/SimplePagesPage.php:88
+#: models/SimplePagesPage.php:89
 msgid "The order must be an integer greater than or equal to 0."
 msgstr "Redni broj mora biti cijeli broj veći od ili jednak 0. "
+
+#: models/SimplePagesPageTranslation.php:31
+msgid "There is already a translation for this language."
+msgstr ""
 
 #: views/admin/index/add.php:5
 msgid "Simple Pages | Add Page"
 msgstr "Jednostavne stranice | Dodaj stranicu"
 
 #: views/admin/index/browse-hierarchy-page.php:16
-#: views/admin/index/browse-list.php:33
+#: views/admin/index/browse-list.php:36
 #, php-format
 msgid "<strong>%1$s</strong> on %2$s"
 msgstr "<strong>%1$s</strong> on %2$s"
@@ -171,6 +209,10 @@ msgstr "Nije objavljeno"
 #: views/admin/index/browse-list.php:7
 msgid "Last Modified"
 msgstr "Posljednje uređivanje"
+
+#: views/admin/index/browse-list.php:28
+msgid "Translate"
+msgstr ""
 
 #: views/admin/index/browse.php:3
 msgid "Simple Pages | Browse"
@@ -204,6 +246,31 @@ msgstr "Jednostavne stranice | Uredi \"%s\""
 #: views/admin/index/edit.php:40
 #, php-format
 msgid ""
-"This page was created by <strong>%1$s</strong> on %2$s, and last modified by"
-" <strong>%3$s</strong> on %4$s."
-msgstr "Stranicu izradio <strong>%1$s</strong>  %2$s, a posljednji put modificirao <strong>%3$s</strong> %4$s."
+"This page was created by <strong>%1$s</strong> on %2$s, and last modified by "
+"<strong>%3$s</strong> on %4$s."
+msgstr ""
+"Stranicu izradio <strong>%1$s</strong>  %2$s, a posljednji put modificirao "
+"<strong>%3$s</strong> %4$s."
+
+#: views/admin/index/translate.php:6
+#, fuzzy, php-format
+msgid "Simple Pages | Translate \"%s\""
+msgstr "Jednostavne stranice | Uredi \"%s\""
+
+#: views/admin/index/translate.php:13
+msgid "Add a translation"
+msgstr ""
+
+#: views/admin/index/translate.php:45
+msgid "There is no translation for this page yet."
+msgstr ""
+
+#: views/admin/translation/add.php:5
+#, fuzzy
+msgid "Simple Pages | Add Translation"
+msgstr "Jednostavne stranice | Dodaj stranicu"
+
+#: views/admin/translation/edit.php:5
+#, fuzzy
+msgid "Simple Pages | Edit Translation"
+msgstr "Jednostavne stranice | Uredi \"%s\""

@@ -1,7 +1,7 @@
 # Translation for the Simple Pages plugin for Omeka.
 # Copyright (C) 2011 Roy Rosenzweig Center for History and New Media
 # This file is distributed under the same license as the Omeka package.
-# 
+#
 # Translators:
 # Matti Lassila <matti.lassila@gmail.com>, 2012,2014
 msgid ""
@@ -11,18 +11,19 @@ msgstr ""
 "POT-Creation-Date: 2012-01-09 21:49-0500\n"
 "PO-Revision-Date: 2014-08-27 05:22+0000\n"
 "Last-Translator: Matti Lassila <matti.lassila@gmail.com>\n"
-"Language-Team: Finnish (Finland) (http://www.transifex.com/omeka/omeka/language/fi_FI/)\n"
+"Language-Team: Finnish (Finland) (http://www.transifex.com/omeka/omeka/"
+"language/fi_FI/)\n"
+"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi_FI\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: SimplePagesPlugin.php:268
+#: SimplePagesPlugin.php:294
 msgid "Simple Pages"
 msgstr "Sivut"
 
-#: SimplePagesPlugin.php:294
+#: SimplePagesPlugin.php:320
 msgid "Simple Page"
 msgstr "Sivu"
 
@@ -34,79 +35,108 @@ msgstr "Haitallisen sisällön suodatus"
 msgid ""
 "If checked, this plugin will filter all simple pages using the HTML filters "
 "set on the security settings page."
-msgstr "Suodata sisältö käyttäen turvallisuusasetuksissa määritettyjä HTML-suodattimia."
+msgstr ""
+"Suodata sisältö käyttäen turvallisuusasetuksissa määritettyjä HTML-"
+"suodattimia."
 
-#: controllers/IndexController.php:65
+#: controllers/IndexController.php:73 controllers/TranslationController.php:53
 msgid "Name and heading for the page (required)"
 msgstr "Sivun nimi ja otsikko (pakollinen)"
 
-#: controllers/IndexController.php:75 views/admin/index/browse-list.php:6
+#: controllers/IndexController.php:83 views/admin/index/browse-list.php:6
 msgid "Slug"
 msgstr "URL-teksti"
 
-#: controllers/IndexController.php:77
+#: controllers/IndexController.php:85
 msgid ""
 "The slug is the part of the URL for this page. A slug will be created "
 "automatically from the title if one is not entered. Letters, numbers, "
 "underscores, dashes, and forward slashes are allowed."
-msgstr "Sivun URL-teksti on osa selaimen osoitepalkissa näytettävää URL-osoitetta. Puuttuva URL-teksti luodaan automaattisesti. Kirjaimet, numerot, alaviivat, väliviivat sekä vinoviivat ovat sallittuja merkkejä."
+msgstr ""
+"Sivun URL-teksti on osa selaimen osoitepalkissa näytettävää URL-osoitetta. "
+"Puuttuva URL-teksti luodaan automaattisesti. Kirjaimet, numerot, alaviivat, "
+"väliviivat sekä vinoviivat ovat sallittuja merkkejä."
 
-#: controllers/IndexController.php:91
+#: controllers/IndexController.php:99
 msgid "Use HTML editor?"
 msgstr "Käytä HTML-editoria"
 
-#: controllers/IndexController.php:93
+#: controllers/IndexController.php:101
 msgid "Check this to add an HTML editor bar for easily creating HTML."
 msgstr "Näytä HTML-työkalurivi muokkausnäkymässä."
 
-#: controllers/IndexController.php:104
+#: controllers/IndexController.php:112
+#: controllers/TranslationController.php:64 views/admin/index/translate.php:20
 msgid "Text"
 msgstr "Teksti"
 
-#: controllers/IndexController.php:106
+#: controllers/IndexController.php:114
+#: controllers/TranslationController.php:66
 msgid ""
 "Add content for page. This field supports shortcodes. For a list of "
-"available shortcodes, refer to the <a target=_blank "
-"href=\"http://omeka.org/codex/Shortcodes\">Omeka Codex</a>."
-msgstr "Voit käyttää sisällössä lyhytkoodeja. Katso ohjeita ja listaus lyhytkoodeista <a href target=\"_blank\" href=\"http://omeka.org/codex/Shortcodes\">Omeka Codex</a> -sivuilta."
+"available shortcodes, refer to the <a target=_blank href=\"http://omeka.org/"
+"codex/Shortcodes\">Omeka Codex</a>."
+msgstr ""
+"Voit käyttää sisällössä lyhytkoodeja. Katso ohjeita ja listaus "
+"lyhytkoodeista <a href target=\"_blank\" href=\"http://omeka.org/codex/"
+"Shortcodes\">Omeka Codex</a> -sivuilta."
 
-#: controllers/IndexController.php:117
+#: controllers/IndexController.php:125
 msgid "Parent"
 msgstr "Yläsivu"
 
-#: controllers/IndexController.php:118
+#: controllers/IndexController.php:126
 msgid "The parent page"
 msgstr "Hierarkiassa ylempi sivu"
 
-#: controllers/IndexController.php:126
+#: controllers/IndexController.php:134
 msgid "Order"
 msgstr "Järjestys"
 
-#: controllers/IndexController.php:128
+#: controllers/IndexController.php:136
 msgid "The order of the page relative to the other pages with the same parent"
 msgstr "Saman yläsivun alla olevien sivujen järjestys toisiinsa."
 
-#: controllers/IndexController.php:140
+#: controllers/IndexController.php:148
 msgid "Publish this page?"
 msgstr "Julkaise"
 
-#: controllers/IndexController.php:141
+#: controllers/IndexController.php:149
 msgid "Checking this box will make the page public"
 msgstr "Julkaisee sivun."
 
-#: controllers/IndexController.php:161
+#: controllers/IndexController.php:177
 #, php-format
 msgid "The page \"%s\" has been added."
 msgstr "Sivu  \"%s\" lisättiin."
 
-#: controllers/IndexController.php:163
+#: controllers/IndexController.php:179
 #, php-format
 msgid "The page \"%s\" has been edited."
 msgstr "Sivua \"%s\" muokattiin. "
 
-#: controllers/IndexController.php:181
+#: controllers/IndexController.php:194
 #, php-format
 msgid "The page \"%s\" has been deleted."
+msgstr "Sivu \"%s\" on poistettu."
+
+#: controllers/TranslationController.php:43
+msgid "Locale"
+msgstr ""
+
+#: controllers/TranslationController.php:94
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been added."
+msgstr "Sivu  \"%s\" lisättiin."
+
+#: controllers/TranslationController.php:96
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been edited."
+msgstr "Sivua \"%s\" muokattiin. "
+
+#: controllers/TranslationController.php:128
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been deleted."
 msgstr "Sivu \"%s\" on poistettu."
 
 #: helpers/SimplePageFunctions.php:121
@@ -117,44 +147,48 @@ msgstr "Etusivu"
 msgid "Main Page (No Parent)"
 msgstr "Pääsivu (hierarkian ylin)"
 
-#: models/SimplePagesPage.php:60
+#: models/SimplePagesPage.php:61 models/SimplePagesPageTranslation.php:23
 msgid "The page must be given a title."
 msgstr "Sivulla tulee olla otsikko."
 
-#: models/SimplePagesPage.php:64
+#: models/SimplePagesPage.php:65 models/SimplePagesPageTranslation.php:27
 msgid "The title for your page must be 255 characters or less."
 msgstr "Sivun otsikon tulee olla 255 merkkiä tai vähemmän."
 
-#: models/SimplePagesPage.php:68
+#: models/SimplePagesPage.php:69
 msgid "The title is already in use by another page. Please choose another."
 msgstr "Otsikko on jo käytössä. Laadi uusi otsikko."
 
-#: models/SimplePagesPage.php:72
+#: models/SimplePagesPage.php:73
 msgid "The page must be given a valid slug."
 msgstr "Sivulla tulee olla URL-teksti, joka sisältää vain sallittuja merkkejä."
 
-#: models/SimplePagesPage.php:76
+#: models/SimplePagesPage.php:77
 msgid "The slug for your page must not be a forward slash."
 msgstr "URL-teksti ei saa olla kauttaviiva."
 
-#: models/SimplePagesPage.php:80
+#: models/SimplePagesPage.php:81
 msgid "The slug for your page must be 255 characters or less."
 msgstr "URL-tekstin tulee olla pituudeltaan 255 merkkiä tai vähemmän."
 
-#: models/SimplePagesPage.php:84
+#: models/SimplePagesPage.php:85
 msgid "The slug is already in use by another page. Please choose another."
 msgstr "URL-teksti on jo käytössä. Laadi uusi teksti."
 
-#: models/SimplePagesPage.php:88
+#: models/SimplePagesPage.php:89
 msgid "The order must be an integer greater than or equal to 0."
 msgstr "Järjestysnumeron tulee olla nollaa suurempi luku."
+
+#: models/SimplePagesPageTranslation.php:31
+msgid "There is already a translation for this language."
+msgstr ""
 
 #: views/admin/index/add.php:5
 msgid "Simple Pages | Add Page"
 msgstr "Sivut | Lisää sivu"
 
 #: views/admin/index/browse-hierarchy-page.php:16
-#: views/admin/index/browse-list.php:33
+#: views/admin/index/browse-list.php:36
 #, php-format
 msgid "<strong>%1$s</strong> on %2$s"
 msgstr "<strong>%1$s</strong>  %2$s"
@@ -170,6 +204,10 @@ msgstr "Julkaisematon"
 #: views/admin/index/browse-list.php:7
 msgid "Last Modified"
 msgstr "Muokattu viimeksi"
+
+#: views/admin/index/browse-list.php:28
+msgid "Translate"
+msgstr ""
 
 #: views/admin/index/browse.php:3
 msgid "Simple Pages | Browse"
@@ -203,6 +241,31 @@ msgstr "Sivut | Muokkaa \"%s\""
 #: views/admin/index/edit.php:40
 #, php-format
 msgid ""
-"This page was created by <strong>%1$s</strong> on %2$s, and last modified by"
-" <strong>%3$s</strong> on %4$s."
-msgstr "Käyttäjä <strong>%1$s</strong> loi sivun %2$s ja sitä muokkasi viimeksi <strong>%3$s</strong> %4$s."
+"This page was created by <strong>%1$s</strong> on %2$s, and last modified by "
+"<strong>%3$s</strong> on %4$s."
+msgstr ""
+"Käyttäjä <strong>%1$s</strong> loi sivun %2$s ja sitä muokkasi viimeksi "
+"<strong>%3$s</strong> %4$s."
+
+#: views/admin/index/translate.php:6
+#, fuzzy, php-format
+msgid "Simple Pages | Translate \"%s\""
+msgstr "Sivut | Muokkaa \"%s\""
+
+#: views/admin/index/translate.php:13
+msgid "Add a translation"
+msgstr ""
+
+#: views/admin/index/translate.php:45
+msgid "There is no translation for this page yet."
+msgstr ""
+
+#: views/admin/translation/add.php:5
+#, fuzzy
+msgid "Simple Pages | Add Translation"
+msgstr "Sivut | Lisää sivu"
+
+#: views/admin/translation/edit.php:5
+#, fuzzy
+msgid "Simple Pages | Edit Translation"
+msgstr "Sivut | Muokkaa \"%s\""

@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: SimplePagesPlugin.php:272
+#: SimplePagesPlugin.php:294
 msgid "Simple Pages"
 msgstr ""
 
-#: SimplePagesPlugin.php:298
+#: SimplePagesPlugin.php:320
 msgid "Simple Page"
 msgstr ""
 
@@ -35,77 +35,98 @@ msgid ""
 "set on the security settings page."
 msgstr ""
 
-#: controllers/IndexController.php:67
+#: controllers/IndexController.php:73 controllers/TranslationController.php:53
 msgid "Name and heading for the page (required)"
 msgstr ""
 
-#: controllers/IndexController.php:77 views/admin/index/browse-list.php:6
+#: controllers/IndexController.php:83 views/admin/index/browse-list.php:6
 msgid "Slug"
 msgstr ""
 
-#: controllers/IndexController.php:79
+#: controllers/IndexController.php:85
 msgid ""
 "The slug is the part of the URL for this page. A slug will be created "
 "automatically from the title if one is not entered. Letters, numbers, "
 "underscores, dashes, and forward slashes are allowed."
 msgstr ""
 
-#: controllers/IndexController.php:93
+#: controllers/IndexController.php:99
 msgid "Use HTML editor?"
 msgstr ""
 
-#: controllers/IndexController.php:95
+#: controllers/IndexController.php:101
 msgid "Check this to add an HTML editor bar for easily creating HTML."
 msgstr ""
 
-#: controllers/IndexController.php:106
+#: controllers/IndexController.php:112
+#: controllers/TranslationController.php:64 views/admin/index/translate.php:20
 msgid "Text"
 msgstr ""
 
-#: controllers/IndexController.php:108
+#: controllers/IndexController.php:114
+#: controllers/TranslationController.php:66
 msgid ""
 "Add content for page. This field supports shortcodes. For a list of "
 "available shortcodes, refer to the <a target=_blank href=\"http://omeka.org/"
 "codex/Shortcodes\">Omeka Codex</a>."
 msgstr ""
 
-#: controllers/IndexController.php:119
+#: controllers/IndexController.php:125
 msgid "Parent"
 msgstr ""
 
-#: controllers/IndexController.php:120
+#: controllers/IndexController.php:126
 msgid "The parent page"
 msgstr ""
 
-#: controllers/IndexController.php:128
+#: controllers/IndexController.php:134
 msgid "Order"
 msgstr ""
 
-#: controllers/IndexController.php:130
+#: controllers/IndexController.php:136
 msgid "The order of the page relative to the other pages with the same parent"
 msgstr ""
 
-#: controllers/IndexController.php:142
+#: controllers/IndexController.php:148
 msgid "Publish this page?"
 msgstr ""
 
-#: controllers/IndexController.php:143
+#: controllers/IndexController.php:149
 msgid "Checking this box will make the page public"
 msgstr ""
 
-#: controllers/IndexController.php:171
+#: controllers/IndexController.php:177
 #, php-format
 msgid "The page \"%s\" has been added."
 msgstr ""
 
-#: controllers/IndexController.php:173
+#: controllers/IndexController.php:179
 #, php-format
 msgid "The page \"%s\" has been edited."
 msgstr ""
 
-#: controllers/IndexController.php:188
+#: controllers/IndexController.php:194
 #, php-format
 msgid "The page \"%s\" has been deleted."
+msgstr ""
+
+#: controllers/TranslationController.php:43
+msgid "Locale"
+msgstr ""
+
+#: controllers/TranslationController.php:94
+#, php-format
+msgid "The translation for \"%s\" has been added."
+msgstr ""
+
+#: controllers/TranslationController.php:96
+#, php-format
+msgid "The translation for \"%s\" has been edited."
+msgstr ""
+
+#: controllers/TranslationController.php:128
+#, php-format
+msgid "The translation for \"%s\" has been deleted."
 msgstr ""
 
 #: helpers/SimplePageFunctions.php:121
@@ -116,11 +137,11 @@ msgstr ""
 msgid "Main Page (No Parent)"
 msgstr ""
 
-#: models/SimplePagesPage.php:61
+#: models/SimplePagesPage.php:61 models/SimplePagesPageTranslation.php:23
 msgid "The page must be given a title."
 msgstr ""
 
-#: models/SimplePagesPage.php:65
+#: models/SimplePagesPage.php:65 models/SimplePagesPageTranslation.php:27
 msgid "The title for your page must be 255 characters or less."
 msgstr ""
 
@@ -148,12 +169,16 @@ msgstr ""
 msgid "The order must be an integer greater than or equal to 0."
 msgstr ""
 
+#: models/SimplePagesPageTranslation.php:31
+msgid "There is already a translation for this language."
+msgstr ""
+
 #: views/admin/index/add.php:5
 msgid "Simple Pages | Add Page"
 msgstr ""
 
 #: views/admin/index/browse-hierarchy-page.php:16
-#: views/admin/index/browse-list.php:33
+#: views/admin/index/browse-list.php:36
 #, php-format
 msgid "<strong>%1$s</strong> on %2$s"
 msgstr ""
@@ -168,6 +193,10 @@ msgstr ""
 
 #: views/admin/index/browse-list.php:7
 msgid "Last Modified"
+msgstr ""
+
+#: views/admin/index/browse-list.php:28
+msgid "Translate"
 msgstr ""
 
 #: views/admin/index/browse.php:3
@@ -204,4 +233,25 @@ msgstr ""
 msgid ""
 "This page was created by <strong>%1$s</strong> on %2$s, and last modified by "
 "<strong>%3$s</strong> on %4$s."
+msgstr ""
+
+#: views/admin/index/translate.php:6
+#, php-format
+msgid "Simple Pages | Translate \"%s\""
+msgstr ""
+
+#: views/admin/index/translate.php:13
+msgid "Add a translation"
+msgstr ""
+
+#: views/admin/index/translate.php:45
+msgid "There is no translation for this page yet."
+msgstr ""
+
+#: views/admin/translation/add.php:5
+msgid "Simple Pages | Add Translation"
+msgstr ""
+
+#: views/admin/translation/edit.php:5
+msgid "Simple Pages | Edit Translation"
 msgstr ""

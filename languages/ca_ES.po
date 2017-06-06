@@ -1,7 +1,7 @@
 # Translation for the Simple Pages plugin for Omeka.
 # Copyright (C) 2011 Roy Rosenzweig Center for History and New Media
 # This file is distributed under the same license as the Omeka package.
-# 
+#
 # Translators:
 # Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2013
 # Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>, 2014
@@ -13,18 +13,19 @@ msgstr ""
 "POT-Creation-Date: 2012-01-09 21:49-0500\n"
 "PO-Revision-Date: 2014-08-02 10:20+0000\n"
 "Last-Translator: Rubén Alcaraz Martínez <rubenalcarazmartinez@gmail.com>\n"
-"Language-Team: Catalan (Spain) (http://www.transifex.com/omeka/omeka/language/ca_ES/)\n"
+"Language-Team: Catalan (Spain) (http://www.transifex.com/omeka/omeka/"
+"language/ca_ES/)\n"
+"Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: SimplePagesPlugin.php:268
+#: SimplePagesPlugin.php:294
 msgid "Simple Pages"
 msgstr "Pàgines estàtiques"
 
-#: SimplePagesPlugin.php:294
+#: SimplePagesPlugin.php:320
 msgid "Simple Page"
 msgstr "Pàgina estàtica"
 
@@ -36,79 +37,110 @@ msgstr "Voleu filtrar l'entrada de dades a la pàgina de continguts?"
 msgid ""
 "If checked, this plugin will filter all simple pages using the HTML filters "
 "set on the security settings page."
-msgstr "Si l'activeu, aquest connector filtrarà totes les pàgines estàtiques amb els filtres HTML especificats als paràmetres de seguretat."
+msgstr ""
+"Si l'activeu, aquest connector filtrarà totes les pàgines estàtiques amb els "
+"filtres HTML especificats als paràmetres de seguretat."
 
-#: controllers/IndexController.php:65
+#: controllers/IndexController.php:73 controllers/TranslationController.php:53
 msgid "Name and heading for the page (required)"
 msgstr "Nom i capçalera per a la pàgina (obligatori)"
 
-#: controllers/IndexController.php:75 views/admin/index/browse-list.php:6
+#: controllers/IndexController.php:83 views/admin/index/browse-list.php:6
 msgid "Slug"
 msgstr "Identificador"
 
-#: controllers/IndexController.php:77
+#: controllers/IndexController.php:85
 msgid ""
 "The slug is the part of the URL for this page. A slug will be created "
 "automatically from the title if one is not entered. Letters, numbers, "
 "underscores, dashes, and forward slashes are allowed."
-msgstr "L'identificador és la part de l'URL per aquesta pàgina. Els identificadors es creen automaticament a partir del títol si no s'indica cap. Les lletres, números, guions baixos, guions i contrabarres són permesos."
+msgstr ""
+"L'identificador és la part de l'URL per aquesta pàgina. Els identificadors "
+"es creen automaticament a partir del títol si no s'indica cap. Les lletres, "
+"números, guions baixos, guions i contrabarres són permesos."
 
-#: controllers/IndexController.php:91
+#: controllers/IndexController.php:99
 msgid "Use HTML editor?"
 msgstr "Voleu utilitzar l'editor HTML?"
 
-#: controllers/IndexController.php:93
+#: controllers/IndexController.php:101
 msgid "Check this to add an HTML editor bar for easily creating HTML."
 msgstr "Activeu aquesta casella per afegir un editor HTML."
 
-#: controllers/IndexController.php:104
+#: controllers/IndexController.php:112
+#: controllers/TranslationController.php:64 views/admin/index/translate.php:20
 msgid "Text"
 msgstr "Text"
 
-#: controllers/IndexController.php:106
+#: controllers/IndexController.php:114
+#: controllers/TranslationController.php:66
 msgid ""
 "Add content for page. This field supports shortcodes. For a list of "
-"available shortcodes, refer to the <a target=_blank "
-"href=\"http://omeka.org/codex/Shortcodes\">Omeka Codex</a>."
-msgstr "Afegiu contingut a la pàgina. Aquest camp admet shortcodes. Per obtenir una llista de shortcodes disponibles, consulteu la <a target=_blank href=\"http://omeka.org/codex/Shortcodes\">documentació d'Omeka </ a>."
+"available shortcodes, refer to the <a target=_blank href=\"http://omeka.org/"
+"codex/Shortcodes\">Omeka Codex</a>."
+msgstr ""
+"Afegiu contingut a la pàgina. Aquest camp admet shortcodes. Per obtenir una "
+"llista de shortcodes disponibles, consulteu la <a target=_blank href="
+"\"http://omeka.org/codex/Shortcodes\">documentació d'Omeka </ a>."
 
-#: controllers/IndexController.php:117
+#: controllers/IndexController.php:125
 msgid "Parent"
 msgstr "Element principal"
 
-#: controllers/IndexController.php:118
+#: controllers/IndexController.php:126
 msgid "The parent page"
 msgstr "Pàgina superior"
 
-#: controllers/IndexController.php:126
+#: controllers/IndexController.php:134
 msgid "Order"
 msgstr "Ordre"
 
-#: controllers/IndexController.php:128
+#: controllers/IndexController.php:136
 msgid "The order of the page relative to the other pages with the same parent"
-msgstr "L'ordre de la pàgina respecte a les altres pàgines amb la mateixa pàgina superior"
+msgstr ""
+"L'ordre de la pàgina respecte a les altres pàgines amb la mateixa pàgina "
+"superior"
 
-#: controllers/IndexController.php:140
+#: controllers/IndexController.php:148
 msgid "Publish this page?"
 msgstr "Voleu publicar aquesta pàgina?"
 
-#: controllers/IndexController.php:141
+#: controllers/IndexController.php:149
 msgid "Checking this box will make the page public"
 msgstr "Marqueu aquesta casella si voleu fer la pàgina pública"
 
-#: controllers/IndexController.php:161
+#: controllers/IndexController.php:177
 #, php-format
 msgid "The page \"%s\" has been added."
 msgstr "S'ha afegit la pàgina: \"%s\""
 
-#: controllers/IndexController.php:163
+#: controllers/IndexController.php:179
 #, php-format
 msgid "The page \"%s\" has been edited."
 msgstr "S'ha editat la pàgina: \"%s\""
 
-#: controllers/IndexController.php:181
+#: controllers/IndexController.php:194
 #, php-format
 msgid "The page \"%s\" has been deleted."
+msgstr "S'ha esborrat la pàgina: \"%s\""
+
+#: controllers/TranslationController.php:43
+msgid "Locale"
+msgstr ""
+
+#: controllers/TranslationController.php:94
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been added."
+msgstr "S'ha afegit la pàgina: \"%s\""
+
+#: controllers/TranslationController.php:96
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been edited."
+msgstr "S'ha editat la pàgina: \"%s\""
+
+#: controllers/TranslationController.php:128
+#, fuzzy, php-format
+msgid "The translation for \"%s\" has been deleted."
 msgstr "S'ha esborrat la pàgina: \"%s\""
 
 #: helpers/SimplePageFunctions.php:121
@@ -119,44 +151,49 @@ msgstr "Inici"
 msgid "Main Page (No Parent)"
 msgstr "Pàgina d'inici (sense element principal)"
 
-#: models/SimplePagesPage.php:60
+#: models/SimplePagesPage.php:61 models/SimplePagesPageTranslation.php:23
 msgid "The page must be given a title."
 msgstr "La pàgina ha de tenir un títol."
 
-#: models/SimplePagesPage.php:64
+#: models/SimplePagesPage.php:65 models/SimplePagesPageTranslation.php:27
 msgid "The title for your page must be 255 characters or less."
 msgstr "El títol per a la pàgina ha de tenir 255 caràcters o menys."
 
-#: models/SimplePagesPage.php:68
+#: models/SimplePagesPage.php:69
 msgid "The title is already in use by another page. Please choose another."
 msgstr "Aquest títol ja s'utilitza per una altra pàgina. Trieu un altre."
 
-#: models/SimplePagesPage.php:72
+#: models/SimplePagesPage.php:73
 msgid "The page must be given a valid slug."
 msgstr "La pàgina ha de tenir un identificador vàlid"
 
-#: models/SimplePagesPage.php:76
+#: models/SimplePagesPage.php:77
 msgid "The slug for your page must not be a forward slash."
 msgstr "L'identificador de la pàgina no pot ser una barra diagonal."
 
-#: models/SimplePagesPage.php:80
+#: models/SimplePagesPage.php:81
 msgid "The slug for your page must be 255 characters or less."
 msgstr "L'identificador de la pàgina ha de tenir 255 caràcters o menys."
 
-#: models/SimplePagesPage.php:84
+#: models/SimplePagesPage.php:85
 msgid "The slug is already in use by another page. Please choose another."
-msgstr "Aquest identificador ja s'utilitza en una altra pàgina. Trieu un altre."
+msgstr ""
+"Aquest identificador ja s'utilitza en una altra pàgina. Trieu un altre."
 
-#: models/SimplePagesPage.php:88
+#: models/SimplePagesPage.php:89
 msgid "The order must be an integer greater than or equal to 0."
 msgstr "El criteri d'ordenació ha de ser un número sencer major o igual a 0."
+
+#: models/SimplePagesPageTranslation.php:31
+msgid "There is already a translation for this language."
+msgstr ""
 
 #: views/admin/index/add.php:5
 msgid "Simple Pages | Add Page"
 msgstr "Pàgines estàtiques | Afegeix una pàgina"
 
 #: views/admin/index/browse-hierarchy-page.php:16
-#: views/admin/index/browse-list.php:33
+#: views/admin/index/browse-list.php:36
 #, php-format
 msgid "<strong>%1$s</strong> on %2$s"
 msgstr "<strong>%1$s</strong> a %2$s"
@@ -172,6 +209,10 @@ msgstr "No publicat"
 #: views/admin/index/browse-list.php:7
 msgid "Last Modified"
 msgstr "Darrera modificació"
+
+#: views/admin/index/browse-list.php:28
+msgid "Translate"
+msgstr ""
 
 #: views/admin/index/browse.php:3
 msgid "Simple Pages | Browse"
@@ -205,6 +246,31 @@ msgstr "Pàgines estàtiques | Edita \"%s\""
 #: views/admin/index/edit.php:40
 #, php-format
 msgid ""
-"This page was created by <strong>%1$s</strong> on %2$s, and last modified by"
-" <strong>%3$s</strong> on %4$s."
-msgstr "Aquesta pàgina s'ha creat <strong>%1$s</strong> el dia %2$s, i l'última modificació ha estat a càrrec de <strong>%3$s</strong> el dia %4$s."
+"This page was created by <strong>%1$s</strong> on %2$s, and last modified by "
+"<strong>%3$s</strong> on %4$s."
+msgstr ""
+"Aquesta pàgina s'ha creat <strong>%1$s</strong> el dia %2$s, i l'última "
+"modificació ha estat a càrrec de <strong>%3$s</strong> el dia %4$s."
+
+#: views/admin/index/translate.php:6
+#, fuzzy, php-format
+msgid "Simple Pages | Translate \"%s\""
+msgstr "Pàgines estàtiques | Edita \"%s\""
+
+#: views/admin/index/translate.php:13
+msgid "Add a translation"
+msgstr ""
+
+#: views/admin/index/translate.php:45
+msgid "There is no translation for this page yet."
+msgstr ""
+
+#: views/admin/translation/add.php:5
+#, fuzzy
+msgid "Simple Pages | Add Translation"
+msgstr "Pàgines estàtiques | Afegeix una pàgina"
+
+#: views/admin/translation/edit.php:5
+#, fuzzy
+msgid "Simple Pages | Edit Translation"
+msgstr "Pàgines estàtiques | Edita \"%s\""
