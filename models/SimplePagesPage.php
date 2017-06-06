@@ -188,6 +188,10 @@ class SimplePagesPage extends Omeka_Record_AbstractRecord implements Zend_Acl_Re
                 return $this->getCreatedByUser()->username;
             case 'modified_username':
                 return $this->getModifiedByUser()->username;
+            case 'localized_title':
+                return $this->getLocalizedTitle();
+            case 'localized_text':
+                return $this->getLocalizedText();
             default:
                 return parent::getProperty($property);
         }
@@ -195,5 +199,54 @@ class SimplePagesPage extends Omeka_Record_AbstractRecord implements Zend_Acl_Re
     public function getResourceId()
     {
 	return 'SimplePages_Page';
+    }
+
+    public function getTranslations()
+    {
+        if (!isset($this->_translations)) {
+            $table = $this->getTable('SimplePagesPageTranslation');
+            $translations = $table->findBy(array(
+                'page_id' => $this->id,
+            ));
+
+            $this->_translations = array();
+            foreach ($translations as $translation) {
+                $this->_translations[$translation->locale] = $translation;
+            }
+        }
+
+        return $this->_translations;
+    }
+
+    public function getTranslation($locale = null)
+    {
+        if (!isset($locale)) {
+            $locale = Zend_Registry::get('bootstrap')->getResource('Locale')->toString();
+        }
+
+        $translations = $this->getTranslations();
+        if (isset($translations[$locale])) {
+            return $translations[$locale];
+        }
+    }
+
+    public function getLocalizedTitle($locale = null)
+    {
+        $translation = $this->getTranslation($locale);
+        if ($translation) {
+            return $translation->title;
+        }
+
+        return $this->title;
+    }
+
+    public function getLocalizedText($locale = null)
+    {
+        $translation = $this->getTranslation($locale);
+        if ($translation) {
+            return $translation->text;
+        }
+
+        return $this->text;
     }
 }
