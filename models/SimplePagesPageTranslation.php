@@ -41,8 +41,15 @@ class SimplePagesPageTranslation extends Omeka_Record_AbstractRecord implements 
             $this->addError('title', __('The title for your page must be 255 characters or less.'));
         }
 
-        if (!$this->fieldIsUnique('locale')) {
-            $this->addError('locale', __('There is already a translation for this language.'));
+        $translations = $this->getTable()->findBy(array(
+            'page_id' => $this->page_id,
+            'locale' => $this->locale,
+        ));
+
+        if (!empty($translations)) {
+            if (!$this->exists() || $this->id !== $translations[0]->id) {
+                $this->addError('locale', __('There is already a translation for this language.'));
+            }
         }
     }
 }
